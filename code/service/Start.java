@@ -15,13 +15,5 @@ class Start {
 
 @SpringBootApplication
 class Setup {
-    
-}
-
-@RestController
-class Sample {
-    @RequestMapping("/check")
-    double check() {
-        return 3.14159367;
-    }
+    String source = "jdbc:mysql://127.0.0.0/db27?user=user27&password=p27";
 }
