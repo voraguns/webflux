@@ -1,4 +1,5 @@
-service/Setup.class
-service/Branch.class
 service/Sample.class
 service/Start.class
+service/Setup.class
+service/Branch.class
+service/BranchRepository.class
