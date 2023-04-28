@@ -20,18 +20,23 @@ public class Test {
         assert true;
         SpringApplication.exit(context);
     } 
+    
     public void test2() {
         context = SpringApplication.run(Setup.class);
         var repository = context.getBean(BranchRepository.class);
-        var before = repository.count();
+        long before = repository.count();
         
         var branch = new Branch();
         branch.name = "Test 1";
         branch.area = 99.99;
-        repository.save(branch);
+        var result = repository.save(branch);
         
         long after = repository.count();
         assert after == before + 1;
+        
+        repository.delete(result);
+        long after2 = repository.count();
+        assert before == after2;
         
         SpringApplication.exit(context);
     } 
