@@ -105,7 +105,7 @@ create user user27 indextified with mysql_native_password by 'p27';<br><br>
 grant all on db27.* to user27;<br><br><br>
 
 
-ีuse db27;<br>
+use db27;<br>
 create table branch (<br><br>
 
 );<br><br>
@@ -126,7 +126,7 @@ Object Relational Mapping<br>
 
 
 Spring Stereotype 6 Types<br>
-1. @Component<br>
+1. @Component เป็น Bean ทั่วไปที่ไม่ใช่ 2, 3<br>
 2. @Repository     for reading writing data<br>
 3. @Service        for business logic<br>
 4. @Indexed        for fast lookup<br>
@@ -156,7 +156,19 @@ create table staff (<br>
     name     varchar(200) unique not null,<br>
     salary   float default 0.0,<br>
     gender   char default 'X'<br>
-);<br>
+);<br><br>
+
+<hr>
+Keyword ที่ชื่อว่า new ใช้สร้าง instance<br>
+- ถ้าจะอ้างอิง Instance ต้องใช้ Address<br><br>
+
+Spring Beans คือ Manageable instance<br>
+- ถ้าจะอ้างอิง Spring Bean ใช้ชื่อของ Bean<br>
+- ใช้ Address ก็ได้<br>
+- ในคู่มือของ Spring จะเรียก Spring Bean ว่า Managed Instance<br>
+- คำว่า Manageable คือจะใช้ Address เดิมก็ได้ หรือสร้างใหม่หรือทำอะไรก็ได้<br>
+
+
 
 
 
